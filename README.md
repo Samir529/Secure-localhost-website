@@ -3,9 +3,10 @@ How to run:
 1. Clone the project
 Make sure you have already installed NodeJs and Git.
 
-git clone https://github.com/MeherajUlMahmmud/NodeJS-487.git
+git clone https://github.com/Samir529/Secure-localhost-website.git
+
 2. cd into the project directory
-cd NodeJS-487
+cd Secure-localhost-website
 3. Install the necessary libraries
 npm install
 4. Run the server
