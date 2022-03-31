@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Secure Localhost Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <style>
+        #uploadForm{
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        input.btn{
+            flex: 0.8;
+        }
+        button.btn{
+            flex: 0.15;
+        }
+    </style>
+</head>
+<body style="background-color:powderblue;">
+    <div class="container" style="margin-top: 50px;">
+		<h1 class="text-center">
+			<a style="color: darkblue;">File Uploading System</a>
+			<br><br>
+			<h4>This is a secure localhost file uploading website and the certificate is signed using a self-signed Root Certificate.</h4>
+		</h1>
+		<div style="margin-top: 80px;">
+			<h3>Upload a file:</h1>
+			<form action="/upload" method="post" enctype="multipart/form-data">
+				<input type="file" name="files" class="btn btn-primary" id="file" multiple>
+				<button class="btn btn-primary" type="submit" style="border-radius: 4px;">Upload</button>
+			</form>
+		</div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("file").value = "";
+    </script>
+</body>
+</html>
