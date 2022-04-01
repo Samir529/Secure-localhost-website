@@ -1,0 +1,26 @@
+
+-> This will generate a 2048 bit RSA private key and save it to a file rootCA.key
+
+	command:
+	openssl genrsa -des3 -out rootCA.key 2048
+
+-> This will generate a self-signed certificate (Root Certificate) through the key generated
+
+	command:
+	openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 1460 -out rootCA.pem
+	
+-> This will generate a private key and certificate signing request file
+
+	command:
+	openssl req -new -sha256 -nodes -out server.csr -newkey rsa:2048 -keyout server.key -config server.csr.cnf
+
+-> Issue a certificate via the root SSL certificate and the CSR
+
+	command:
+	openssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server.crt -days 500 -sha256 -extfile v3.ext
+
+
+
+
+
+
