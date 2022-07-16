@@ -1,7 +1,7 @@
 # Secure-localhost-website
 
 ## 👉 Tutorial link:
-    https://youtu.be/VjrKXONhjWE
+https://youtu.be/VjrKXONhjWE
 
 ## How to run:
 ### 1. Clone the project
